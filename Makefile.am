@@ -377,6 +377,7 @@ darwin_platform_headers = \
 	darwin/DarwinProcessTable.h \
 	darwin/Platform.h \
 	darwin/PlatformHelpers.h \
+	darwin/PowerMeter.h \
 	darwin/ProcessField.h \
 	generic/fdstat_sysctl.h \
 	generic/gettime.h \
@@ -391,6 +392,7 @@ darwin_platform_sources = \
 	GPUMeter.c \
 	darwin/Platform.c \
 	darwin/PlatformHelpers.c \
+	darwin/PowerMeter.c \
 	darwin/DarwinMachine.c \
 	darwin/DarwinProcess.c \
 	darwin/DarwinProcessTable.c \

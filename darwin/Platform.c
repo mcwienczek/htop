@@ -51,6 +51,7 @@ in the source distribution for its full text.
 #include "UptimeMeter.h"
 #include "darwin/DarwinMachine.h"
 #include "darwin/PlatformHelpers.h"
+#include "darwin/PowerMeter.h"
 #include "generic/fdstat_sysctl.h"
 #include "zfs/ZfsArcMeter.h"
 #include "zfs/ZfsCompressedArcMeter.h"
@@ -152,6 +153,9 @@ const MeterClass* const Platform_meterTypes[] = {
    &MemorySwapMeter_class,
    &TasksMeter_class,
    &BatteryMeter_class,
+#ifdef __arm64__
+   &PowerMeter_class,
+#endif
    &HostnameMeter_class,
    &SysArchMeter_class,
    &UptimeMeter_class,
